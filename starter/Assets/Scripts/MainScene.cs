@@ -4,7 +4,7 @@ public class MainScene : MonoBehaviour
 {
     public void Start()
     {
-        // TODO: Initialize Mobile Ads SDK and load an app open ad.
+        // TODO: Request an app open ad.
         
     }
 
@@ -13,7 +13,7 @@ public class MainScene : MonoBehaviour
         if (!paused)
         {
             // TODO: Show an app open ad if available.
-            
+
         }
     }
 }

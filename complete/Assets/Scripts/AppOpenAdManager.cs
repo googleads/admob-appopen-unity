@@ -18,6 +18,7 @@ public class AppOpenAdManager
 
     private bool isShowingAd = false;
 
+    // COMPLETE: Add loadTime field
     private DateTime loadTime;
 
     public static AppOpenAdManager Instance
@@ -37,6 +38,7 @@ public class AppOpenAdManager
     {
         get
         {
+            // COMPLETE: Consider ad expiration
             return ad != null && (System.DateTime.UtcNow - loadTime).TotalHours < 4;
         }
     }
@@ -57,8 +59,10 @@ public class AppOpenAdManager
 
             // App open ad is loaded
             ad = appOpenAd;
-            loadTime = DateTime.UtcNow;
             Debug.Log("App open ad loaded");
+            
+            // COMPLETE: Keep track of time when the ad is loaded.
+            loadTime = DateTime.UtcNow;
         }));
     }
 
