@@ -20,7 +20,10 @@ public class MainScene : MonoBehaviour
     public void Start()
     {
         // COMPLETE: Request an app open ad.
-        AppOpenAdManager.Instance.LoadAd();
+        MobileAds.Initialize((initStatus) =>
+        {
+            AppOpenAdManager.Instance.LoadAd();
+        });
     }
 
     public void OnApplicationPause(bool paused)
