@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using GoogleMobileAds.Api;
+using GoogleMobileAds.Common;
 using UnityEngine;
 
 public class MainScene : MonoBehaviour
@@ -23,12 +24,13 @@ public class MainScene : MonoBehaviour
         MobileAds.Initialize((initStatus) =>
         {
             AppOpenAdManager.Instance.LoadAd();
+            AppStateEventNotifier.AppStateChanged += OnAppStateChanged;
         });
     }
 
-    public void OnApplicationPause(bool paused)
+    public void OnAppStateChanged(AppState state)
     {
-        if (!paused)
+        if (state == AppState.Foreground)
         {
             // COMPLETE: Show an app open ad if available.
             AppOpenAdManager.Instance.ShowAdIfAvailable();
