@@ -3,8 +3,8 @@
 In this codelab, you'll learn how to add an AdMob app open ad to a Unity app.
 
 Tested with:
-- Unity 2020.3.18f1
-- Google Mobile Ads Unity Plugin 6.1.0
+- Unity 2021.3.5f1
+- Google Mobile Ads Unity Plugin 7.1.0
 
 ## Getting started
 
@@ -14,7 +14,7 @@ https://codelabs.developers.google.com/codelabs/admob-appopen-unity to get start
 ## License
 
 ```
-Copyright 2021 Google LLC
+Copyright 2022 Google LLC
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
